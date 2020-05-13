@@ -1,5 +1,89 @@
-<body>
-<h1 id="title">Music Survey Form</h1>
-<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
 
-</body>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+      input, textarea, select {
+        display: block;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      form {
+        background-color: purple;
+        padding: 40px 40px 40px 40px;
+      }
+      #button-area {
+        float: left;
+        width: 50%;
+        height: 50%;
+      }
+      label {
+        font-size: 18px;
+        display: block;
+        padding-bottom: 10px;
+      }
+      .radio-inline {
+        display: inline-block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Music Survey Form</h1>
+    <p id="description">
+      This is a survey for letting us know the type of music you like.
+    </p>
+    <form id="survey-form">
+      <label id="name-label">Name:</label>
+      <input type="text" name="name" required id="name" placeholder="Enter your name"><br>
+      <label id="email-label">Email:</label>
+      <input type="email" name="email" required id="email" placeholder="Enter your email"><br>
+      <label id="number-label">Number:</label>
+      <input type="number" name="number" min="0" max="100" required id="number" placeholder="Age"><br>
+
+      <label id="streaming-service-label">Streaming service</label>
+      <select id="dropdown" name="streaming services">
+        <option value="apple music">Apple Music</option>
+        <option value="spotify">Spotify</option>
+        <option value="deezer">Deezer</option>
+        <option value="audiomack">Audiomack</option>
+        <option value="other">Other</option>
+      </select>
+
+
+      <div>
+        <br>
+        <label id="additional-comments-label">Additional comments</label>
+        <textarea placeholder="Additional comments"></textarea>
+      </div>
+
+      <div id="button-area">
+        <br>
+        <label id="gender-label">Gender</label>
+          <input type="radio" name="gender" class="radio-inline" value="male"> Male<br>
+          <input type="radio" name="gender" class="radio-inline" value="female"> Female<br>
+          <input type="radio" name="gender" class="radio-inline" value="other"> Other
+      </div>
+
+
+      <div id="button-area">
+        <br>
+        <label id="genre-type-label">Genre type</label>
+      <input type="checkbox" name="genre1" class="radio-inline" value="Pop"> Pop<br>
+      <input type="checkbox" name="genre2" class="radio-inline" value="Rap"> Rap<br>
+      <input type="checkbox" name="genre3" class="radio-inline" value="RnB"> RnB<br>
+      </div>
+
+
+
+      <input type="submit" id="submit">
+    </form>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+  </body>
+</html>
